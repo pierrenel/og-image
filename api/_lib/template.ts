@@ -44,14 +44,15 @@ function getCss(theme: string, fontSize: string) {
       }
 
     body {
-        background: ${background};
-        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
-        background-size: 100px 100px;
         height: 100vh;
         display: flex;
         text-align: center;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        background: url('https://simply.co.za/_next/static/images/family2.svg') center bottom 902px no-repeat, url('https://simply.co.za/_next/static/images/grass.svg') repeat-x;
+        background-repeat: no-repeat, repeat-x;
+        background-position: center bottom;
+        background-size: 50%;
     }
 
     code {
@@ -74,7 +75,7 @@ function getCss(theme: string, fontSize: string) {
     }
 
     .logo {
-        margin: 0 75px;
+        margin: 0 25px;
     }
 
     .plus {
@@ -93,14 +94,22 @@ function getCss(theme: string, fontSize: string) {
         margin: 0 .05em 0 .1em;
         vertical-align: -0.1em;
     }
-    
+
+    .heading p {
+        margin-top: 0;
+        background-color: #ffffffee;
+        padding: 2rem;
+        border-radius: 1rem;
+        font-weight: bold;
+    }
+
     .heading {
         font-family: 'Inter', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};
-        line-height: 1.8;
     }`;
+
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
@@ -115,13 +124,13 @@ export function getHtml(parsedReq: ParsedRequest) {
     </style>
     <body>
         <div>
-            <div class="spacer">
+
             <div class="logo-wrapper">
                 ${images.map((img, i) =>
                     getPlusSign(i) + getImage(img, widths[i], heights[i])
                 ).join('')}
             </div>
-            <div class="spacer">
+
             <div class="heading">${emojify(
                 md ? marked(text) : sanitizeHtml(text)
             )}
