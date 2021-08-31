@@ -17,9 +17,7 @@ function getCss(theme: string, fontSize: string) {
 
 
     if (theme === 'dark') {
-        background = 'black';
         foreground = 'white';
-        radial = 'dimgray';
     }
     return `
     @font-face {
