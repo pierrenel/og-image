@@ -47,10 +47,10 @@ function getCss(theme: string, fontSize: string) {
         text-align: center;
         align-items: flex-start;
         justify-content: center;
-        background: url('https://simply.co.za/_next/static/images/family2.svg') center bottom 902px no-repeat, url('https://simply.co.za/_next/static/images/grass.svg') repeat-x;
+        background: url('https://simply.co.za/_next/static/images/family2.svg') center bottom 902px no-repeat, url('https://simply.co.za/_next/static/images/grass.svg') repeat-x, url('https://simply.co.za/_next/static/images/dots2.svg') no-repeat;
         background-repeat: no-repeat, repeat-x;
-        background-position: center bottom;
-        background-size: 50%;
+        background-position: center bottom, center bottom, top 50px right 50px;
+        background-size: 50%, 50%, 120px;
     }
 
     code {
