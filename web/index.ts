@@ -145,7 +145,7 @@ const imageLightOptions: DropdownOption[] = [
     { text: 'Vercel', value: 'https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg' },
     { text: 'Next.js', value: 'https://assets.vercel.com/image/upload/front/assets/design/nextjs-black-logo.svg' },
     { text: 'Hyper', value: 'https://assets.vercel.com/image/upload/front/assets/design/hyper-color-logo.svg' },
-    { text: 'Simply', value: 'https://og-image-orpin-theta.vercel.app/simply.svg' },
+    { text: 'Simply', value: 'https://og-image-nel.vercel.app/simply.svg' },
 ];
 
 const imageDarkOptions: DropdownOption[] = [
